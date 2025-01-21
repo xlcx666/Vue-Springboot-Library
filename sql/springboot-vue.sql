@@ -37,7 +37,7 @@ CREATE TABLE `book`  (
 -- ----------------------------
 -- Records of book
 -- ----------------------------
-INSERT INTO `book` VALUES (9, '12341541321', '十万个为什么', 15.00, '苏格与', '宁波大学出版社', '2014-12-16', '1', 7);
+INSERT INTO `book` VALUES (9, '12341541321', '十万个为什么', 15.00, '小王', '宁波大学出版社', '2014-12-16', '1', 7);
 INSERT INTO `book` VALUES (10, '2312315132131', '五万个为什么', NULL, NULL, NULL, NULL, '1', 3);
 INSERT INTO `book` VALUES (11, '25213121232', '一万个为什么', NULL, NULL, NULL, NULL, '1', 5);
 INSERT INTO `book` VALUES (12, '3213123123', '操作系统', NULL, NULL, NULL, NULL, '0', 8);
@@ -151,14 +151,5 @@ CREATE TABLE `user`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of user
--- ----------------------------
-INSERT INTO `user` VALUES (5, '账户', '12345', '苏梦宇', '18321299982', '男', '宁波大学甬江公寓2号楼428', 1);
-INSERT INTO `user` VALUES (13, '2656454', '123456', '裘斯与', '12313282823', '男', '宁波大学甬江公寓1号楼321室', 2);
-INSERT INTO `user` VALUES (14, '123456', '123456', '王翀', '15321255432', '男', '宁波大学北区学生二村222室', 2);
-INSERT INTO `user` VALUES (15, '542212', '12345', '邱思宇', NULL, NULL, NULL, 2);
-INSERT INTO `user` VALUES (16, '12345', '12345', '苏梦宇', '13213232989', '男', '宁波大学', 2);
-INSERT INTO `user` VALUES (17, '苏格瑜', 'sugeyu', NULL, NULL, NULL, NULL, 2);
 
-SET FOREIGN_KEY_CHECKS = 1;
+
