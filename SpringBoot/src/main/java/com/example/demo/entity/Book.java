@@ -24,6 +24,7 @@ public class Book {
     private String name;
     private BigDecimal price;
     private String author;
+    private String category;
     private Integer borrownum;
     private String publisher;
     @JsonFormat(locale="zh",timezone="GMT+8", pattern="yyyy-MM-dd")
