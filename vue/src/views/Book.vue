@@ -19,6 +19,11 @@
             <template #prefix><el-icon class="el-input__icon"><search /></el-icon></template>
           </el-input>
         </el-form-item >
+        <el-form-item label="分类" >
+          <el-input v-model="search4" placeholder="请输入分类"  clearable>
+            <template #prefix><el-icon class="el-input__icon"><search /></el-icon></template>
+          </el-input>
+        </el-form-item >
         <el-form-item>
           <el-button type="primary" style="margin-left: 1%" @click="load" size="mini" >
             <svg-icon iconClass="search"/>查询</el-button>
@@ -61,6 +66,7 @@
       <el-table-column prop="name" label="图书名称" />
       <el-table-column prop="price" label="价格" sortable/>
       <el-table-column prop="author" label="作者" />
+      <el-table-column prop="category" label="分类" />
       <el-table-column prop="publisher" label="出版社" />
       <el-table-column prop="createTime" label="出版时间" sortable/>
       <el-table-column prop="status" label="状态">
@@ -136,6 +142,9 @@
           <el-form-item label="作者">
             <el-input style="width: 80%" v-model="form.author"></el-input>
           </el-form-item>
+          <el-form-item label="分类">
+            <el-input style="width: 80%" v-model="form.category"></el-input>
+          </el-form-item>
           <el-form-item label="出版社">
             <el-input style="width: 80%" v-model="form.publisher"></el-input>
           </el-form-item>
@@ -167,6 +176,9 @@
           </el-form-item>
           <el-form-item label="作者">
             <el-input style="width: 80%" v-model="form.author"></el-input>
+          </el-form-item>
+          <el-form-item label="分类">
+            <el-input style="width: 80%" v-model="form.category"></el-input>
           </el-form-item>
           <el-form-item label="出版社">
             <el-input style="width: 80%" v-model="form.publisher"></el-input>
@@ -231,6 +243,7 @@ export default {
           search1: this.search1,
           search2: this.search2,
           search3: this.search3,
+          search4: this.search4,
         }
       }).then(res =>{
         console.log(res)
@@ -274,6 +287,7 @@ export default {
       this.search1 = ""
       this.search2 = ""
       this.search3 = ""
+      this.search4 = ""
       this.load()
     },
 
@@ -487,6 +501,7 @@ export default {
       search1:'',
       search2:'',
       search3:'',
+      search4:'',
       total:10,
       currentPage:1,
       pageSize: 10,
