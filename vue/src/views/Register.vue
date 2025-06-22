@@ -60,7 +60,9 @@ export default {
   },
   data(){
     return{
-      form:{},
+      form:{
+        authorize:'1234',
+      },
       validCode: '',
       rules: {
         username: [
@@ -107,6 +109,7 @@ export default {
     },
     register(){
       this.$refs['form'].validate((valid) => {
+        console.log(1111)
         if (valid) {
           if (!this.form.validCode) {
             ElMessage.error("请填写验证码")

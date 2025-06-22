@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import '@/assets/css/global.css'
 
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import '@/assets/icon/iconfont.js' // 图标

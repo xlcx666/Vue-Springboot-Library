@@ -129,7 +129,6 @@ export default {
         ElMessage.warning("请选择数据！")
         return
       }
-      //  一个小优化，直接发送这个数组，而不是一个一个的提交删除
       request.post("/user/deleteBatch",this.ids).then(res =>{
         if(res.code === '0'){
           ElMessage.success("批量删除成功")
@@ -194,7 +193,7 @@ export default {
             ElMessage.error(res.msg)
           }
 
-          this.load() //不知道为啥，更新必须要放在这里面
+          this.load()
           this.dialogVisible = false
         })
       }
