@@ -15,7 +15,7 @@
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icondashboard "></use>
       </svg>
-      <span>展示板</span>
+      <span>首页</span>
     </el-menu-item>
     <el-sub-menu index="2" text-color="#fff">
       <template #title>
